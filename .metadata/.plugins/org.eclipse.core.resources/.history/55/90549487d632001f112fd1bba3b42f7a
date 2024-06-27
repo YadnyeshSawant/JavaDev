@@ -1,0 +1,72 @@
+//Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.
+package Polymorphism;
+
+import java.util.Scanner;
+
+class Vehicle{
+	int model,year,maxSpeed;
+	String make;
+	String fuelType;
+	Vehicle(String make,int model, int year,String fuelType,int maxSpeed){
+		this.model = model;
+		this.make = make;
+		this.year = year;
+		this.fuelType = fuelType;
+		this.maxSpeed = maxSpeed;
+	}
+}
+class Truck extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Truck(String make,int model,int year, String fuelType,int maxSpeed){
+		super(model,make,year,fuelType,maxSpeed);
+	}
+	public Truck(int model, int i, int year, Object fuelType, int maxSpeed) {
+		// TODO Auto-generated constructor stub
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	void distanceTraveled() {
+		System.out.println("Distance Traveled = "+distanceTraveled);
+	}
+	
+}
+class Car01 extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Car01(int model,String make,int year, String fuelType,int maxSpeed){
+		super(model,make,year,fuelType,maxSpeed);
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	void distanceTraveled() {
+		System.out.println("Distance Traveled = "+distanceTraveled);
+	}
+}
+class Morotcycle extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Morotcycle(int model,String make,int year, String fuelType,int maxSpeed){
+		super(model,make,year,fuelType,maxSpeed);
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	void distanceTraveled() {
+		System.out.println("Distance Traveled = "+distanceTraveled);
+	}
+}
+public class VechileInfo {
+
+	public static void main(String[] args) {
+		Truck t = new Truck(121, 0, 0, null, 0)
+		String ch;
+		Scanner sc = new Scanner(System.in);
+		ch = sc.next();
+		System.out.println("Vehicle Type\t model \t make \t year \t maxSpeed");
+		switch(ch) {
+		case "Truck":System.out.println(ch+"\t"+);
+		 			 
+		}
+	}
+
+}

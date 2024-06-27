@@ -1,0 +1,113 @@
+//Write a Java program to create a base class BankAccount with methods deposit() and withdraw(). Create two subclasses SavingsAccount and CheckingAccount. Override the withdraw() method in each subclass to impose different withdrawal limits and fees.
+package Polymorphism;
+import java.util.*;
+class BankAccount2{
+	double balance = 20000;
+	double amount;
+	Scanner sc = new Scanner(System.in);
+	void deposite() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		this.balance = balance + amount;
+	}
+	void withdraw() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		this.balance = balance - amount;
+	}
+	double checkBalance() {
+//		System.out.println("Balance = "+ balance);
+		return balance;
+	}
+}
+class SavingsAccount2 extends BankAccount2{
+	double amount = super.amount;
+//	SavingsAccount2(double balance) {
+//		super(balance);
+//	}
+	void withdraw() {
+//		System.out.println("Enter Amount");
+//		amount = sc.nextDouble();
+		if(super.balance > 1000) {
+			super.withdraw();
+		}
+		else {
+			System.out.println("Insufficient Balance");
+		}
+	}
+	void deposite() {
+//		System.out.println("Enter Amount");
+//		amount = sc.nextDouble();
+		super.deposite();
+	}
+}
+class CurrentAccount extends BankAccount2{
+	double amount= super.amount;
+//	CheckingAccount(double balance) {
+//		super(balance);
+//	}
+	void deposite() {
+//		System.out.println("Enter Amount");
+//		amount = sc.nextDouble();
+		super.deposite();
+	}
+	void withdraw() {
+//		System.out.println("Enter Amount");
+//		amount = sc.nextDouble();
+		if(super.balance > amount) {
+			super.withdraw();
+		}
+		else {
+			System.out.println("Insufficient Balance");
+		}
+	}
+}
+public class Test2 {
+
+	public static void main(String[] args) {
+		SavingsAccount2 sav = new SavingsAccount2();
+		CurrentAccount cur = new CurrentAccount();
+		int ch =0;
+		Scanner sc = new Scanner(System.in);
+			System.out.println("1: Savings Account\n2:Current Acccount");
+			System.out.println("Enter your choice");
+			ch = sc.nextInt();
+			switch(ch) {
+				case 1: ch = 0;
+						System.out.println("1: Check Balance \n2: Withdraw Amount \n3:Deposite Amount");
+						System.out.println("Enter your choice");
+						ch = sc.nextInt();
+						
+						switch(ch) {
+							case 1: System.out.println("Balance = "+sav.checkBalance());
+								break;
+							case 2: sav.withdraw();
+									System.out.println("Amount withdrawn = "+sav.amount);
+									System.out.println("Current Balance = "+sav.checkBalance());
+								break;
+							case 3:sav.deposite();
+									System.out.println("Amount Deposited = "+sav.amount);
+									System.out.println("Current Balance = "+sav.checkBalance());
+								break;
+						}
+					break;
+				case 2: ch = 0;
+						System.out.println("1: Check Balance \n2: Withdraw Amount \n3:Deposite Amount");
+						System.out.println("Enter your choice");
+						ch = sc.nextInt();
+						switch(ch) {
+							case 1: System.out.println("Balance = "+cur.checkBalance());
+								break;
+							case 2: cur.withdraw();
+								System.out.println("Amount withdrawn = "+cur.amount);
+									System.out.println("Current Balance = "+cur.checkBalance());
+								break;
+							case 3:cur.deposite();
+									System.out.println("Amount Deposited = "+cur.amount);
+									System.out.println("Current Balance = "+cur.checkBalance());
+								break;
+						}
+					break;
+			}
+	}
+}

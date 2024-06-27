@@ -1,0 +1,54 @@
+//Write a Java program to create a base class BankAccount with methods deposit() and withdraw(). Create two subclasses SavingsAccount and CheckingAccount. Override the withdraw() method in each subclass to impose different withdrawal limits and fees.
+package Polymorphism;
+import java.util.*;
+class BankAccount2{
+	double balance;
+	double amount;
+	Scanner sc = new Scanner(System.in);
+	BankAccount2(double balance){
+		this.balance = balance;
+	}
+	void deposite() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		this.balance = balance + amount;
+	}
+	void withdraw() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		this.balance = balance - amount;
+	}
+	void checkBalance() {
+		System.out.println("Balance = "+ balance);
+	}
+}
+class SavingsAccount2 extends BankAccount2{
+	double amount;
+	SavingsAccount2(double balance) {
+		super(balance);
+	}
+	void withdraw() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		if(super.balance > amount) {
+			super.withdraw();
+		}
+		else {
+			System.out.println("Insufficient Balance");
+		}
+	}
+	void deposite() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		super.deposite();
+	}
+}
+class CheckingAccount extends BankAccount2
+public class Test2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

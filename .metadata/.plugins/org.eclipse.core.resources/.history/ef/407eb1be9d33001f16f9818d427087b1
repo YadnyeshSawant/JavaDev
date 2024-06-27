@@ -1,0 +1,78 @@
+//Write a Java program to create a base class BankAccount with methods deposit() and withdraw(). Create two subclasses SavingsAccount and CheckingAccount. Override the withdraw() method in each subclass to impose different withdrawal limits and fees.
+package Polymorphism;
+import java.util.*;
+class BankAccount2{
+	double balance = 20000;
+	double amount;
+	Scanner sc = new Scanner(System.in);
+	void deposite() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		this.balance = balance + amount;
+	}
+	void withdraw() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		this.balance = balance - amount;
+	}
+	double checkBalance() {
+//		System.out.println("Balance = "+ balance);
+		return balance;
+	}
+}
+class SavingsAccount2 extends BankAccount2{
+	double amount;
+//	SavingsAccount2(double balance) {
+//		super(balance);
+//	}
+	void withdraw() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		if(super.balance > 1000) {
+			super.withdraw();
+		}
+		else {
+			System.out.println("Insufficient Balance");
+		}
+	}
+	void deposite() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		super.deposite();
+	}
+}
+class CheckingAccount extends BankAccount2{
+	double amount;
+//	CheckingAccount(double balance) {
+//		super(balance);
+//	}
+	void deposite() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		super.deposite();
+	}
+	void withdraw() {
+		System.out.println("Enter Amount");
+		amount = sc.nextDouble();
+		if(super.balance > amount) {
+			super.withdraw();
+		}
+		else {
+			System.out.println("Insufficient Balance");
+		}
+	}
+}
+public class Test2 {
+
+	public static void main(String[] args) {
+		SavingsAccount2 sav = new SavingsAccount2();
+		System.out.println("1: Savings Account\n2:Current Acccount");
+		int ch;
+		Scanner sc = new Scanner(System.in);
+		ch = sc.nextInt();
+		switch(ch) {
+		case 1: 
+		}
+	}
+
+}

@@ -1,0 +1,88 @@
+//Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.
+package Polymorphism;
+
+import java.util.Scanner;
+
+class Vehicle{
+	int model,year,maxSpeed;
+	String make;
+	String fuelType;
+	Vehicle(String make,int model, int year,String fuelType,int maxSpeed){
+		this.model = model;
+		this.make = make;
+		this.year = year;
+		this.fuelType = fuelType;
+		this.maxSpeed = maxSpeed;
+	}
+}
+class Truck extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Truck(String make,int model,int year, String fuelType,int maxSpeed,double fuelQuantity,double distanceTraveled){
+		super(make,model,year,fuelType,maxSpeed);
+		this.fuelQuantity = fuelQuantity;
+		this.distanceTraveled = distanceTraveled;
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	double distanceTraveled() {
+		return distanceTraveled;
+	}
+	void dispaly() {
+		System.out.println(make+"\t "+model+"\t "+year+"\t   "+fuelType+"\t "+maxSpeed+"\t\t"+fuelEfficiency()+"\t\t\t"+distanceTraveled());
+	}
+}
+class Car01 extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Car01(String make,int model,int year, String fuelType,int maxSpeed, double fuelQuantity,double distanceTraveled){
+		super(make,model,year,fuelType,maxSpeed);
+		this.fuelQuantity = fuelQuantity;
+		this.distanceTraveled = distanceTraveled;
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	double distanceTraveled() {
+		return distanceTraveled;
+	}
+	void dispaly() {
+		System.out.println(make+"\t "+model+"\t "+year+"\t   "+fuelType+"\t "+maxSpeed+"\t\t"+fuelEfficiency()+"\t\t\t"+distanceTraveled());
+	}
+}
+class Motorcycle extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Motorcycle(String make,int model,int year, String fuelType,int maxSpeed,double fuelQuantity,double distanceTraveled){
+		super(make,model,year,fuelType,maxSpeed);
+		this.fuelQuantity = fuelQuantity;
+		this.distanceTraveled = distanceTraveled;
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	double distanceTraveled() {
+		return distanceTraveled;
+	}
+	void dispaly() {
+		System.out.println(make+"\t "+model+"\t "+year+"\t   "+fuelType+"\t "+maxSpeed+"\t\t"+fuelEfficiency()+"\t\t\t"+distanceTraveled());
+	}
+}
+public class VechileInfo {
+
+	public static void main(String[] args) {
+		Truck t = new Truck("TATA", 12, 2022, "Petrol", 120,32,1120);
+		Car01 c = new Car01("Hundai",102,2023,"Diesel",250,12.0,2450);
+		Motorcycle m = new Motorcycle("Honda", 112, 2012, "Petrol", 110, 5.5, 2270);
+		System.out.println("Maker \t Model \t Year \t Fuel Type \t maxSpeed\tfuel Efficiency\t\tDistance Traveled,");
+		t.dispaly();
+		c.dispaly();
+		m.dispaly();
+//				case "Truck":System.out.println("\t"+ch+"\t"+t.make+"\t "+t.model+"\t "+t.year+"\t   "+t.fuelType+"\t "+t.maxSpeed+"\t\t"+t.fuelEfficiency()+"\t"+t.distanceTraveled());
+//						break;
+//				case "Car":System.out.println("\t"+ch+"\t"+c.make+"\t "+c.model+"\t "+c.year+"\t   "+c.fuelType+"\t "+c.maxSpeed+"\t\t"+c.fuelEfficiency()+"\t"+c.distanceTraveled());
+//						break;
+//				case "Motorcycle":System.out.println("\t"+ch+"\t"+m.make+"\t "+m.model+"\t "+m.year+"\t   "+m.fuelType+"\t "+m.maxSpeed+"\t\t"+m.fuelEfficiency()+"\t"+m.distanceTraveled());
+//						break;
+//				case "Exit": System.out.println("Exit");
+//					break;
+		}
+	}

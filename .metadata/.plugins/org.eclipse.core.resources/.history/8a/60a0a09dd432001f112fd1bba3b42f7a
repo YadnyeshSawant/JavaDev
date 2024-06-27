@@ -1,0 +1,34 @@
+//Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.
+package Polymorphism;
+class Vehicle{
+	int model, make,year,maxSpeed;
+	String fuelType;
+	Vehicle(int model,int make, int year,String fuelType,int maxSpeed){
+		this.model = model;
+		this.make = make;
+		this.year = year;
+		this.fuelType = fuelType;
+		this.maxSpeed = maxSpeed;
+	}
+}
+class Truck extends Vehicle{
+	Truck(int model,int make,int year, String fuelType,int maxSpeed){
+		super(model,make,year,fuelType,maxSpeed);
+	}
+	double fuelQuantity,distanceTraveled;
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	void distanceTraveled() {
+		System.out.println("Distance Traveled = "+distanceTraveled);
+	}
+	
+}
+public class VechileInfo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

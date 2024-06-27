@@ -1,0 +1,33 @@
+package Aggregation;
+class Books{
+	int bookId;
+	String name;
+	double price;
+	Books(int bookId,String name,double price){
+		this.bookId = bookId;
+		this.name = name;
+		this.price = price;
+	}
+}
+public class Library {
+	int memberId;
+	String memberName;
+	Books book;
+	
+	Library(int memberId,String memberName,Books book){
+		this.memberId = memberId;
+		this.memberName = memberName;
+		this.book = book;
+	}
+	void display() {
+		System.out.println(memberId+" "+" "+memberName+" "+book.bookId+" "+book.name+" "+book.price);
+	}
+	public static void main(String[] args) {
+		Books book1 = new Books(111,"Harry Potter",340.45);
+		Library mem1 = new Library(101,"Yadnyesh",book1);
+		
+		mem1.display();
+
+	}
+
+}

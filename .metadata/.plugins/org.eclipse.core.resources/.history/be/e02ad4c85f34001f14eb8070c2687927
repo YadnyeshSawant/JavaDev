@@ -1,0 +1,13 @@
+package FinalKeyword;
+
+public class Cube {
+	int cube(final int n) {
+		n = n+2;
+//		n * n * n;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

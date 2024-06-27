@@ -1,0 +1,39 @@
+//Write a Java program to create a class Employee with a method called calculateSalary(). Create two subclasses Manager and Programmer. In each subclass, override the calculateSalary() method to calculate and return the salary based on their specific roles.
+package Polymorphism;
+class Employee1{
+	double salary;
+	Employee1(double salary){
+		this.salary = salary;
+	}
+	double calculateSalary() {
+		return salary;
+	}
+}
+class Manager extends Employee1 {
+	Manager(double salary){
+		super(salary);
+	}
+	double calculateSalary() {
+		return salary;
+	}
+}
+class Programmer extends Employee1{
+	Programmer(double salary){
+		super(salary);
+	}
+	double calculateSalary() {
+		return salary;
+	}
+} 
+public class EmpSalary {
+
+	public static void main(String[] args) {
+		Manager man = new Manager(12000);
+		Programmer p = new Programmer(20000);
+		
+		System.out.println("Salary info");
+		System.out.println("Manager salary is"+man.calculateSalary());
+		System.out.println("Programmer salary is"+p.calculateSalary());
+	}
+
+}

@@ -1,0 +1,71 @@
+//Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.
+package Polymorphism;
+
+import java.util.Scanner;
+
+class Vehicle{
+	int model,year,maxSpeed;
+	String make;
+	String fuelType;
+	Vehicle(String make,int model, int year,String fuelType,int maxSpeed){
+		this.model = model;
+		this.make = make;
+		this.year = year;
+		this.fuelType = fuelType;
+		this.maxSpeed = maxSpeed;
+	}
+}
+class Truck extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Truck(String make,int model,int year, String fuelType,int maxSpeed,double fuelQuantity,double distanceTraveled){
+		super(make,model,year,fuelType,maxSpeed);
+		this.fuelQuantity = fuelQuantity;
+		this.distanceTraveled = distanceTraveled;
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	void distanceTraveled() {
+		System.out.println("Distance Traveled = "+distanceTraveled);
+	}
+	
+}
+class Car01 extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Car01(int model,String make,int year, String fuelType,int maxSpeed){
+		super(make,model,year,fuelType,maxSpeed);
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	void distanceTraveled() {
+		System.out.println("Distance Traveled = "+distanceTraveled);
+	}
+}
+class Morotcycle extends Vehicle{
+	double fuelQuantity,distanceTraveled;
+	Morotcycle(int model,String make,int year, String fuelType,int maxSpeed){
+		super(make,model,year,fuelType,maxSpeed);
+	}
+	double fuelEfficiency(){
+		return(distanceTraveled % fuelQuantity);
+	}
+	void distanceTraveled() {
+		System.out.println("Distance Traveled = "+distanceTraveled);
+	}
+}
+public class VechileInfo {
+
+	public static void main(String[] args) {
+		Truck t = new Truck("TATA", 12, 2022, "Petrol", 120,4.14,1120);
+		String ch;
+		Scanner sc = new Scanner(System.in);
+		ch = sc.next();
+		System.out.println("Vehicle  Type\t maker \t model \t year \t Fuel Type \t maxSpeed\tfuel efficiency\tdistance traveled,");
+		switch(ch) {
+		case "Truck":System.out.println("\t"+ch+"\t"+t.make+"\t "+t.model+"\t "+t.year+"\t   "+t.fuelType+"\t "+t.maxSpeed+"\t"+t.fuelEfficiency()+"\t"+t.distanceTraveled);
+		 			 
+		}
+	}
+
+}

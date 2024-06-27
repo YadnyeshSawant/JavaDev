@@ -1,0 +1,16 @@
+package FinalKeyword;
+class Vehicle{
+	final int speedlimit;
+	Vehicle(){
+		speedlimit = 90;
+		System.out.println(speedlimit);
+	}
+}
+public class Vehicle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

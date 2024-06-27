@@ -1,0 +1,14 @@
+package FinalKeyword;
+
+public class Cube {
+	int cube(final int n) {
+		n = n+2;
+//		n * n * n;
+	}
+	public static void main(String[] args) {
+		Cube c = new Cube();
+		c.cube(2);
+
+	}
+
+}

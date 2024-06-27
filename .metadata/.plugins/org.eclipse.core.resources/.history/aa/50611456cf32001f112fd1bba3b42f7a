@@ -1,0 +1,43 @@
+//Write a Java program to create a class known as Person with methods called getFirstName() and getLastName(). Create a subclass called Employee that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title.
+package Polymorphism;
+class Person {
+	String firstName;
+	String lastName;
+	Person(String firstName,String lastName){
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	String getFirstName() {
+//		System.out.println(firstName);
+		return firstName;
+	}
+	String getLastName() {
+//	System.out.println(lastName);
+		return lastName;
+	}
+}
+class Emp extends Person{
+	int empId;
+	String jobTitle;
+	Emp(String firstName,String lastName,int empId, String jobTitle){
+		super(firstName, lastName);
+		this.empId = empId;
+		this.jobTitle = jobTitle;
+	}
+	String getLastName() {
+		super.getLastName();
+		return lastName;
+	}
+	void display() {
+		System.out.println(firstName + "\t" + getLastName()+ "\t" + empId + "\t" + jobTitle);
+	}
+}
+public class Employee02 {
+
+	public static void main(String[] args) {
+		Emp e1 = new Emp("Vishal","pawar",111,"Developer");
+		e1.getLastName();
+		
+	}
+
+}
