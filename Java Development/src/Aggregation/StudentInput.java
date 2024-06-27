@@ -1,0 +1,47 @@
+package Aggregation;
+import java.util.*;
+class School1{
+	String schoolName;
+	int contact;
+	String city,state,country;
+	
+	School1(){
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter School name");
+		schoolName = sc.next();
+		System.out.println("Enter School contact");
+		contact = sc.nextInt();
+		System.out.println("Enter School city");
+		city = sc.next();
+		System.out.println("Enter School state");
+		state = sc.next();
+		System.out.println("Enter School country");
+		country = sc.next();
+	}
+}
+public class StudentInput{
+	int id;
+	String name;
+	School1 school;
+	StudentInput(){
+		school = new School1();
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Student ID");
+		id = sc.nextInt();
+		System.out.println("Enter Student name");
+		name = sc.next();
+		
+	}
+	void display() {
+		System.out.println("Details of student");
+		System.out.println(id+" "+name+" "+school.schoolName+" "+school.city+" "+school.state+" "+school.country+" "+school.contact);
+	}
+	public static void main(String[] args) {
+		//School1 school01 = new School1();
+		StudentInput stud = new StudentInput();
+		stud.display();
+	}
+
+}
