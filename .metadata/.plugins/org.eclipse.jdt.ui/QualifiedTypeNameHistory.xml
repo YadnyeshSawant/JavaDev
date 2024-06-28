@@ -4,4 +4,5 @@
     <fullyQualifiedTypeName name="Polymorphism.BankAccount"/>
     <fullyQualifiedTypeName name="Polymorphism.SavingsAccount"/>
     <fullyQualifiedTypeName name="Polymorphism.BankAccount2"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
