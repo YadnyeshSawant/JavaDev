@@ -1,0 +1,32 @@
+package Polymorphism;
+class Bank03{
+	float getRateOfIntrest() {
+		
+		return(0);
+	}
+}
+class SBI extends Bank03{
+	float getRateOfIntrest() {
+		
+		return(8.4f);
+	}
+}
+class ICICI extends Bank03{
+	float getRateOfIntrest() {
+		
+		return(7.3f);
+	}
+}
+public class Roi {
+	
+	public static void main(String[] args) {
+		Bank03 b;
+		b = new SBI();
+		System.out.println("SBI = "+b.getRateOfIntrest());
+		
+		b = new SBI();
+		System.out.println("ICICI = "+b.getRateOfIntrest());
+
+	}
+
+}
