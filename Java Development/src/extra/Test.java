@@ -1,0 +1,28 @@
+package extra;
+import java.util.*;
+public class Test {
+	
+	public static void main(String[] args) {
+		int n;
+		float x;
+		String y;
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter int");
+		n = sc.nextInt();
+		System.out.println("Enter float");
+		x = sc.nextFloat();
+		sc.nextLine();
+		System.out.println("Enter string");
+		y = sc.nextLine();
+		System.out.println("Enter float");
+		x = sc.nextFloat();
+
+
+		System.out.println(y);
+		System.out.println(x);
+		System.out.println(n);
+
+	}
+
+}

@@ -37,6 +37,7 @@ class Product{
 	}
 }
 class Electronics extends Product{
+	@Override
 	String getProductName() {
 		this.proName = sc.next();
 		return proName;

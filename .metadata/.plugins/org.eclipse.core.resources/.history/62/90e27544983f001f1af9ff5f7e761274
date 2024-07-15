@@ -1,0 +1,17 @@
+package extra;
+class inputs() {
+	int n;
+	float x;
+	String y;
+	inputs(){
+		Scanner sc = new Scanner()
+	}
+}
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

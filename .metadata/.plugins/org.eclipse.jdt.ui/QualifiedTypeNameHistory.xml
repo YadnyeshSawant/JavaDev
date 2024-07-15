@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="Polymorphism.BankAccount"/>
     <fullyQualifiedTypeName name="Polymorphism.SavingsAccount"/>
     <fullyQualifiedTypeName name="Polymorphism.BankAccount2"/>
+    <fullyQualifiedTypeName name="practiceTest.GeometricShape"/>
+    <fullyQualifiedTypeName name="practiceTest.Square"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="interfaceJava.printable"/>
+    <fullyQualifiedTypeName name="interfaceJava.Drawable"/>
+    <fullyQualifiedTypeName name="interfaceJava.Rectangle"/>
+    <fullyQualifiedTypeName name="interfaceJava.SavingAccount"/>
+    <fullyQualifiedTypeName name="interfaceJava.CurrentAccount"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
