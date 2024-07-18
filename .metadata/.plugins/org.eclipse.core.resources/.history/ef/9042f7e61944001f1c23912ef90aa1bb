@@ -1,0 +1,52 @@
+package strings;
+
+import java.util.Scanner;
+
+public class CharAt {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String str = sc.next();
+		// to get character at the give index
+		System.out.println("Character at given index");
+		char strinfo = str.charAt(2);
+		System.out.println(strinfo+"\n");
+		
+		// To get the character at the last index
+		System.out.println("Character at Last Index");
+		int Strlength = str.length();
+		strinfo = str.charAt(Strlength -1);
+		System.out.println(strinfo+"\n");
+		
+//		Print Characters Presented at Odd Positions by Using the charAt() Method
+		
+		System.out.println("Characters at odd position");
+		String str2 = "Yadnyesh Sawant";
+		
+		for (int i =0;i<str2.length()-1 ; i++) {
+			if(i%2 != 0) {
+				System.out.println("Char at "+ i +" place is  "+ str2.charAt(i));
+			}
+		}
+		
+		System.out.println("\nFrequency of a character in string");
+		int count = 0;
+		String str3 = "Welcome to Java";
+		for (int i =0 ; i<str3.length()-1;i++) {
+			if(str3.charAt(i) == 'e') {
+				count ++;
+			}
+		}
+		System.out.println("Frequency of e is "+count+"\n");
+		
+		// Counting the number of vowels in a string
+		count =0;
+		for (int i =0 ; i<str3.length();i++) {
+			if(str3.charAt(i) == 'a' || str3.charAt(i) == 'A'|| str3.charAt(i) == 'e'|| str3.charAt(i) == 'E'|| 
+					str3.charAt(i) == 'i'|| str3.charAt(i) == 'I'|| str3.charAt(i) == 'o'|| str3.charAt(i) == 'O'|| str3.charAt(i) == 'U'|| str3.charAt(i) == 'u') {
+				count++ ;
+			}
+		}
+		System.out.println("Vowels in the string are"+count +"\n");
+	}
+}

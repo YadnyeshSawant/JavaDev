@@ -1,0 +1,18 @@
+package strings;
+
+public class Concat {
+
+	public static void main(String[] args) {
+		String fname = "Yadnyesh";
+		String sname = "Sawant";
+		
+		String fullName = fname.concat(" "+sname);
+
+		System.out.println(fullName);
+
+		// To concatinate with the a symbol
+		String email = fname.concat("@").concat("gmail.com");
+		System.out.println(email);
+	}
+
+}

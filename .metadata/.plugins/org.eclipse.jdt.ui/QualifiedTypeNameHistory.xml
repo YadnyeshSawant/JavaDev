@@ -5,7 +5,6 @@
     <fullyQualifiedTypeName name="Polymorphism.BankAccount2"/>
     <fullyQualifiedTypeName name="practiceTest.GeometricShape"/>
     <fullyQualifiedTypeName name="practiceTest.Square"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="interfaceJava.printable"/>
     <fullyQualifiedTypeName name="interfaceJava.Drawable"/>
     <fullyQualifiedTypeName name="interfaceJava.Rectangle"/>
@@ -13,4 +12,6 @@
     <fullyQualifiedTypeName name="interfaceJava.CurrentAccount"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.awt.Window.Type"/>
 </qualifiedTypeNameHistroy>

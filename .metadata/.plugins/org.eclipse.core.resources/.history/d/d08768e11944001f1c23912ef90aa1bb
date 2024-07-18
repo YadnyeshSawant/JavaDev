@@ -1,0 +1,11 @@
+package strings;
+import java.util.*;
+public class ComparTo {
+
+	public static void main(String[] args) {
+		String str = "Yadnyesh";
+		String str2 = "yadnyesh";
+		int result = str.compareTo(str2);
+	}
+
+}

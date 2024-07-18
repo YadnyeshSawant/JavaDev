@@ -1,0 +1,29 @@
+package strings;
+import java.util.*;
+public class ComparTo {
+
+	public static void main(String[] args) {
+		String str = "Yadnyesh";
+		String str2 = "yadnyesh";
+		int result = str.compareTo(str2);
+		if(result >0) {
+			System.out.println("String 1 is greater");
+		}
+		else if(result <0) {
+			System.out.println("String 2 is smaller");
+		}
+		else {
+			System.out.println("Both strings are same");
+		}
+ // Comparing a string with an emplty string
+		
+		String str3 = "";
+		result = str.compareTo(str3);
+		if(result >0) {
+			System.out.println("String 1 is greater");
+		}
+		else if(result <0) {
+			System.out.println("String 2 is smaller");
+		}
+	}
+}
