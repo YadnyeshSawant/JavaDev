@@ -1,0 +1,10 @@
+package Synchronisation;
+
+public class syncBlock {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

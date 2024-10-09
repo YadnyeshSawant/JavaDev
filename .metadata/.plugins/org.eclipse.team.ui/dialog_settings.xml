@@ -2,4 +2,8 @@
 <section name="Workbench">
 	<section name="SynchronizeViewSettings">
 	</section>
+	<section name="SynchronizeWizard">
+		<section name="GlobalSynchronizeWizard.dialogBounds">
+		</section>
+	</section>
 </section>

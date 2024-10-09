@@ -1,0 +1,18 @@
+package Synchronisation;
+
+class PrintThreadName{
+	synchronized void display() {
+		
+		try {
+			System.out.println("");
+		}
+		catch(Exception e )
+		{
+			System.out.println(e);
+		}
+	}
+}
+
+public class synctrial {
+
+}
