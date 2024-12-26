@@ -1,5 +1,5 @@
 //Write a Java program to create a base class BankAccount with methods deposit() and withdraw(). Create two subclasses SavingsAccount and CheckingAccount. Override the withdraw() method in each subclass to impose different withdrawal limits and fees.
-//This Same program can be used for ATM Machine Transaction.
+//This Same program can be used for AT Machine Transaction.
 
 import java.util.*;
 import java.util.regex.*;
@@ -31,19 +31,19 @@ class SavingsAccount2 extends BankAccount2{
 //	SavingsAccount2(double balance) {
 //		super(balance);
 //	}
-	double getAmount() {
-		return super.amount;
-	}
-	@Override
-	void withdraw() {
+@Override
+void withdraw() {
 //		System.out.println("Enter Amount");
 //		amount = sc.nextDouble();
-		if(super.balance > 1000) {
-			super.withdraw();
-		}
-		else {
-			System.out.println("Insufficient Balance");
-		}
+	if(super.balance > 1000) {
+		super.withdraw();
+	}
+	else {
+		System.out.println("Insufficient Balance");
+	}
+}
+	double getAmount() {
+		return super.amount;
 	}
 	@Override
 	void deposite() {

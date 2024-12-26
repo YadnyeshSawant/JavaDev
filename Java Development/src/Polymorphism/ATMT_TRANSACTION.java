@@ -1,5 +1,5 @@
 //Write a Java program to create a base class BankAccount with methods deposit() and withdraw(). Create two subclasses SavingsAccount and CheckingAccount. Override the withdraw() method in each subclass to impose different withdrawal limits and fees.
-//This Same program can be used for ATM Machine Transaction.
+//This Same program can be used for AT Machine Transaction.
 
 //import user defined packages
 package Polymorphism;

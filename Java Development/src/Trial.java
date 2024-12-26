@@ -24,8 +24,10 @@ public static void main(String args[]){
 //	String input = sc.next();
 	String name = null;
 //	if(Pattern.matches("[a-zA-z]\\D+",input)) {
-	if(Pattern.matches("^[a-zA-Z\\s]+$",sc.next())) {
+	String input = sc.next();
+	if(Pattern.matches("^[a-zA-Z\\s]+$",input)) {
 		System.out.println("Data Saved Successfully");
+		name = input;
 		System.out.println("Name =" + name);
 	}
 	else {
