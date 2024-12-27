@@ -13,6 +13,7 @@ public class forgot extends Frame implements ActionListener {
     Label pass = new Label("Enter New Password");
     Label message = new Label("Message");
     Button change = new Button("Change Password");
+    Button login = new Button("Go to Login");
 //    Button login = new Button("Go To Loin Page");
     TextField username = new TextField();
     TextField password = new TextField();
@@ -27,6 +28,7 @@ public class forgot extends Frame implements ActionListener {
         change.setBounds(180, 200, 150, 30);
         message.setBounds(100, 250, 100, 20);
         successMsg.setBounds(100, 300, 290, 20);
+        login.setBounds(180, 350, 150, 30);
 
         add(name);
         add(pass);
@@ -36,8 +38,10 @@ public class forgot extends Frame implements ActionListener {
         add(change);
 //        add(login);
         add(message);
+        add(login);
 
         change.addActionListener(this);
+        login.addActionListener(this);
 //        login.addActionListener(this);
 
         setSize(700,700);
@@ -58,6 +62,9 @@ public class forgot extends Frame implements ActionListener {
             else {
                 changePass();
             }
+        }
+        if(e.getSource()==login){
+            Dblogin  db = new Dblogin();
         }
 
     }
@@ -81,7 +88,7 @@ public class forgot extends Frame implements ActionListener {
             System.out.println(er);
         }
     }
-//    public static void main(String[] args) {
-//        forgot f = new forgot();
-//    }
+    public static void main(String[] args) {
+        forgot f = new forgot();
+    }
 }

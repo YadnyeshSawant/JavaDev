@@ -104,7 +104,7 @@ public class Dblogin extends Frame implements ActionListener{
             System.out.println(er);
         }
     }
-    public static void main(String[] args) {
-        Dblogin db = new Dblogin();
-    }
+//    public static void main(String[] args) {
+//        Dblogin db = new Dblogin();
+//    }
 }
