@@ -88,7 +88,6 @@ public class Dblogin extends Frame implements ActionListener{
             Statement stmt = con.createStatement();
 
             String query = "select * from credentials where id = '" + id + "' and password = '" + pass + "'";
-
             ResultSet rs = stmt.executeQuery(query);
             if (rs.next()){
                 successMsg.setText("Login Success");
@@ -104,7 +103,7 @@ public class Dblogin extends Frame implements ActionListener{
             System.out.println(er);
         }
     }
-//    public static void main(String[] args) {
-//        Dblogin db = new Dblogin();
-//    }
+    public static void main(String[] args) {
+        Dblogin db = new Dblogin();
+    }
 }

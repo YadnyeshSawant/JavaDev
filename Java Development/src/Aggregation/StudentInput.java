@@ -1,4 +1,4 @@
-package Aggregation;
+package aggregation;
 import java.util.*;
 class School1{
 	String schoolName;

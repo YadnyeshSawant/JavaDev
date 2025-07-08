@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Java Development:jar">
+    <output-path>$PROJECT_DIR$/../out/artifacts/Java_Development_jar</output-path>
+    <root id="archive" name="Java Development.jar" />
+  </artifact>
+</component>
